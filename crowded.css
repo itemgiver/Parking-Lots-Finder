@@ -1,0 +1,401 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#logo_div {
+    position: absolute;
+    top: 4px;
+    left: 7px;
+    width: 429px;
+    height: 85px;
+    background-color: white;
+    font-size: 16px;
+    font-family: Arial;
+    border-top: 1px solid #FAFAFA;
+    border-left: 1px solid #EDEDED;
+    border-right: 1px solid #EDEDED;
+    border-bottom: 1px solid #E0E0E0;
+    border-radius: 7px;
+    z-index: 50;
+}
+
+#search_div {
+    position: absolute;
+    top: 12.5%;
+    left: 0%;
+    width: 29.2%;
+    height: 17.5%;
+    z-index: 100;
+    background-color: transparent;
+}
+
+#informations_div {
+    display: none;
+    position: absolute;
+    top: 30%;
+    left: 0%;
+    width: 29.2%;
+    height: 70%;
+    border-top: 1px solid #E6E6E6;
+    background-color: white;
+    overflow: auto;
+}
+
+#information_display1 {
+    width: 100%;
+    height: 100%;
+}
+
+#information_display2 {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+}
+
+input::-webkit-input-placeholder {
+    color: #C0C0C0;
+}
+
+input:-ms-input-placeholder {
+    color: #C0C0C0;
+}
+
+#keyboard_icon {
+    position: absolute;
+    left: 24px;
+    top: 11px;
+    color: #5B5B5B;
+    font-size: 32px;
+    z-index: 200;
+    cursor: pointer;
+}
+
+#search_icon {
+    position: absolute;
+    left: 342px;
+    top: 14px;
+    color: #BABABA;
+    font-size: 28px;
+    z-index: 200;
+    cursor: pointer;
+}
+
+#straight_line {
+    position: absolute;
+    left: 382px;
+    top: 14px;
+    width: 2px;
+    height: 30px;
+    background-color: #EAEAEA;
+    z-index: 200;
+}
+
+#close_icon {
+    position: absolute;
+    left: 396px;
+    top: 14px;
+    color: #BABABA;
+    font-size: 28px;
+    z-index: 200;
+    cursor: pointer;
+}
+
+#white_search_div {
+    position: absolute;
+    left: 7px;
+    width: 429px;
+    height: 56px;
+    background-color: white;
+    font-size: 16px;
+    font-family: Arial;
+    border-top: 1px solid #FAFAFA;
+    border-left: 1px solid #EDEDED;
+    border-right: 1px solid #EDEDED;
+    border-bottom: 1px solid #E0E0E0;
+    border-radius: 7px;
+    z-index: 50;
+}
+
+#search_box {
+    position: absolute;
+    top: 4px;
+    left: 80px;
+    width: 261px;
+    height: 50px;
+    font-size: 16px;
+    font-family: Arial;
+    border: 0px;
+    border-radius: 0px 7px 7px 0px;
+    z-index: 100;
+}
+
+#none_display_divs {
+    display: none;
+}
+
+#my_location_icon {
+    position: absolute;
+    left: 25px;
+    top: 74px;
+    color: #5B5B5B;
+    font-size: 32px;
+    z-index: 200;
+    cursor: pointer;
+}
+
+#my_location_text {
+    position: absolute;
+    left: 64px;
+    top: 72px;
+    color: black;
+    font-size: 12px;
+    z-index: 200;
+    cursor: pointer;
+}
+
+#sort_icon {
+    position: absolute;
+    left: 280px;
+    top: 78px;
+    color: #5B5B5B;
+    font-size: 28px;
+    z-index: 200;
+    cursor: pointer;
+}
+
+#sort_text {
+    position: absolute;
+    left: 316px;
+    top: 73px;
+    color: black;
+    font-size: 12px;
+    z-index: 200;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F0F0F0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888888;
+}
+
+.information_cell {
+    width: 100%;
+    height: 25%;
+    background-color: white;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+#google_map {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: #E6E6E6;
+}
+
+.gm-style .controls {
+    font-size: 28px; /* this adjusts the size of all the controls */
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    cursor: pointer;
+    font-weight: 300;
+    height: 1em;
+    margin: 6px;
+    text-align: center;
+    user-select: none;
+    padding: 2px;
+    width: 1em;
+}
+
+.gm-style .controls button {
+    border: 0;
+    background-color: white;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.gm-style .controls button:hover {
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.gm-style .controls.zoom-control {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.gm-style .controls.zoom-control button {
+    font: 0.85em Arial;
+    margin: 1px;
+    padding: 0;
+}
+
+#confirm-message {
+    position: absolute;
+    display: none;
+    opacity: 1;
+    z-index: 10000;
+    top: 35%;
+    left: 38%;
+    width: 360px;
+}
+
+#navigation-message {
+    position: absolute;
+    display: none;
+    opacity: 1;
+    z-index: 10000;
+    top: 35%;
+    left: 52%;
+    width: 360px;
+}
+
+.jBox-content {
+    width: auto;
+    height: auto;
+    min-width: 360px;
+    max-width: 500px;
+}
+
+.information_cell {
+    position: relative;
+}
+
+.information_cell2 {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-bottom: 1px solid #E6E6E6;
+    position: relative;
+}
+
+#fold-button1 {
+    display: none;
+    position: absolute;
+    left: 29.2%;
+    top: 2.5%;
+    width: 2%;
+    height: 7.5%;
+    z-index: 10000;
+    background-color: #FDFCFC;
+    cursor: pointer;
+}
+
+#fold-button2 {
+    position: absolute;
+    left: 28.4%;
+    top: 2.5%;
+    width: 2.8%;
+    height: 7.5%;
+    z-index: 10000;
+    background-color: #FDFCFC;
+    cursor: pointer;
+}
+
+.fa-caret-left {
+    position: relative;
+    top: 19px;
+    right: -10px;
+    color: #747573;
+}
+
+.fa-caret-right {
+    position: relative;
+    top: 19px;
+    right: -18px;
+    color: #747573;
+}
+
+#tutorial{
+    position: absolute;
+    background-color: white;
+    width: 60%;
+    height: 80%;
+    left: 20%;
+    top: 10%;
+    z-index: 20000;
+}
+
+.tutorial-content{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.tutorial-circle{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 92.5%;
+    text-align: center;
+    background-color: #808080;
+    border-radius: 50%;
+    color: white;
+    line-height: 27px;
+}
+
+#tutorial-left{
+    position: absolute;
+    top: 50%;
+    left: 1%;
+}
+
+#tutorial-right {
+    position: absolute;
+    top: 50%;
+    right: 1%;
+}
+
+#tutorial-close{
+    position: absolute;
+    top: 1%;
+    right: 1%;
+}
+
+.tutorial-title {
+    position: absolute;
+    width: 90%;
+    height: 10%;
+    left: 5%;
+    font-size: 24px;
+    line-height: 60px;
+}
+
+.tutorial-video{
+    position: absolute;
+    width: 90%;
+    left: 5%;
+    top: 10%;
+}
+
+#tutorial-left-div {
+    position: absolute;
+    width: 5%;
+    height: 80.8%;
+    top: 10%;
+    background-color: #F5F5F5;
+}
+
+#tutorial-right-div {
+    position: absolute;
+    width: 5%;
+    height: 80.8%;
+    top: 10%;
+    left: 95%;
+    background-color: #F5F5F5;
+}

@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://maps.google.com/maps/api/js?key=AIzaSyDbs4oxA3ULW_MHD0Y7hsXoiU_uY-COiWQ&libraries=geometry,places,directions"
+            type="text/javascript"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link href="./crowded.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.2.0/dist/jBox.all.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.2.0/dist/jBox.all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="virtual-keyboard.css">
+    <script src="virtual-keyboard.min.js"></script>
+</head>
+<body>
+    <script src="./jquery/js/jquery-ui-1.10.0.custom.min.js"></script>
+    <script src="./crowded.js"></script>
+    <div id="logo_div">
+        <img src="./logo.png" alt="cannot find the image" style="width:380px;height:76px;padding-left:30px;padding-top:7px;">
+    </div>
+    <div id="search_div">
+        <div id="white_search_div"></div>
+        <div class="virtual-keyboard-hook" data-target-id="search_box" data-keyboard-mapping="qwerty"><i id="keyboard_icon" class="fa fa-keyboard-o"></i></div>
+        <i id="search_icon" class="material-icons">search</i>
+        <div id="straight_line"></div>
+        <i id="close_icon" class="material-icons">close</i>
+        <input id="search_box" type="text" placeholder="Search the destination" virtual-keyboard>
+        <div id="information_co">
+            <span id="place-name" class="title"></span><br>
+            <span id="place-address"></span>
+        </div>
+
+        <div id="none_display_divs">
+            <i id="my_location_icon" class="material-icons">my_location</i>
+            <div id="my_location_text">Searching for parking lots near<br>KAIST | 한국과학기술원 대덕캠퍼스</div>
+            <i id="sort_icon" class="fas fa-sort-amount-down-alt"></i>
+            <div id="sort_text">Sorted by:<br>Distance</div>
+        </div>
+    </div>
+    <div id="informations_div">
+        <div id="information_display1">
+            <div id="cell0" class="information_cell"></div>
+            <div id="cell1" class="information_cell"></div>
+            <div id="cell2" class="information_cell"></div>
+            <div id="cell3" class="information_cell"></div>
+            <div id="cell4" class="information_cell"></div>
+            <div id="cell5" class="information_cell"></div>
+            <div id="cell6" class="information_cell"></div>
+            <div id="cell7" class="information_cell"></div>
+            <div id="cell8" class="information_cell"></div>
+            <div id="cell9" class="information_cell"></div>
+            <div id="cell10" class="information_cell"></div>
+            <div id="cell11" class="information_cell"></div>
+            <div id="cell12" class="information_cell"></div>
+            <div id="cell13" class="information_cell"></div>
+            <div id="cell14" class="information_cell"></div>
+            <div id="cell15" class="information_cell"></div>
+            <div id="cell16" class="information_cell"></div>
+            <div id="cell17" class="information_cell"></div>
+            <div id="cell18" class="information_cell"></div>
+            <div id="cell19" class="information_cell"></div>
+        </div>
+        <div id="information_display2">
+            <div id="cell20" class="information_cell2"></div>
+        </div>
+    </div>
+    <div id="google_map"></div>
+    <div id="fold-button1">
+        <div id="left-icon">
+            <i class="fa fa-caret-left" style="font-size: 20px;"></i>
+        </div>
+    </div>
+    <div id="fold-button2">
+        <div id="right-icon">
+            <i class="fa fa-caret-right" style="font-size: 20px;"></i>
+        </div>
+    </div>
+    <div id="confirm-message" class="jBox-wrapper jBox-Confirm jBox-Default jBox-Modal">
+        <div class="jBox-container">
+            <div id="confirm-content" class="jBox-content"></div>
+            <div class="jBox-Confirm-footer">
+                <div id="confirm-cancel" class="jBox-Confirm-button jBox-Confirm-button-cancel">Nope</div>
+                <div id="confirm-submit" class="jBox-Confirm-button jBox-Confirm-button-submit">Do it!</div>
+            </div>
+        </div>
+    </div>
+    <div id="navigation-message" class="jBox-wrapper jBox-Confirm jBox-Default jBox-Modal">
+        <div class="jBox-container">
+            <div class="jBox-content">Do you want to start navigation?<br></div>
+            <div class="jBox-Confirm-footer">
+                <div id="navigation-cancel" class="jBox-Confirm-button jBox-Confirm-button-cancel">Nope</div>
+                <div id="navigation-submit" class="jBox-Confirm-button jBox-Confirm-button-submit">Do it!</div>
+            </div>
+        </div>
+    </div>
+    <div id="tutorial-color" style="position: absolute; width: 100%; height: 100%; z-index: 10001; background-color: rgba(100,100,100,0.4)"></div>
+    <div id="tutorial">
+        <div id="tutorial-1" class="tutorial-content">
+            <div class="tutorial-title">
+                <strong>Tutorial 1</strong> : Click on the map to see the parking lots
+            </div>
+            <video class="tutorial-video" controls autoplay muted loop>
+                <source src="./tutorial_video/Change_pin_by_click_map.mp4" , type="video/mp4" />
+            </video>
+        </div>
+        <div id="tutorial-2" class="tutorial-content" style="display: none;">
+            <div class="tutorial-title">
+                <strong>Tutorial 2</strong> : Search destination in the search box
+            </div>
+            <video class="tutorial-video" controls autoplay muted loop>
+                <source src="./tutorial_video/Search_destination.mp4" , type="video/mp4" />
+            </video>
+        </div>
+        <div id="tutorial-3" class="tutorial-content" style="display: none;">
+            <div class="tutorial-title">
+                <strong>Tutorial 3</strong> : Check the surrounding parking lots
+            </div>
+            <video class="tutorial-video" controls autoplay muted loop>
+                <source src="./tutorial_video/Search_based_on_current_location.mp4" , type="video/mp4" />
+            </video>
+        </div>
+        <div id="tutorial-4" class="tutorial-content" style="display: none;">
+            <div class="tutorial-title">
+                <strong>Tutorial 4</strong> : Sort parking lots
+            </div>
+            <video class="tutorial-video" controls autoplay muted loop>
+                <source src="./tutorial_video/Sort_by_dis,crowd.mp4" , type="video/mp4" />
+            </video>
+        </div>
+        <div id="tutorial-circle-1" class="tutorial-circle" style="left: 33%; background-color: black">1</div>
+        <div id="tutorial-circle-2" class="tutorial-circle" style="left: 43%;">2</div>
+        <div id="tutorial-circle-3" class="tutorial-circle" style="left: 53%;">3</div>
+        <div id="tutorial-circle-4" class="tutorial-circle" style="left: 63%;">4</div>
+        <div id="tutorial-left-div">
+
+        </div>
+        <div id="tutorial-right-div">
+
+        </div>
+        <div id="tutorial-left" style="color: #808080;">
+            <i class="fa fa-angle-left" style="font-size: 60px;"></i>
+        </div>
+        <div id="tutorial-right">
+            <i class="fa fa-angle-right" style="font-size: 60px;"></i>
+        </div>
+        <i id="tutorial-close" class="fa fa-close" style="font-size: 36px; color: #808080"></i>
+    </div>
+</body>
+</html>
