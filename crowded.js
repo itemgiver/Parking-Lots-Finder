@@ -518,7 +518,7 @@ function show_informations() {
         str += ', ';
         str += locations[i].phone;
         str += '</p>';
-        str += '<img src="./';
+        str += '<img src="./image/parking_lots/';
         str += i % 10;
         str += '.jpg" alt="cannot find the image" style="width:108px;height:54px;float:right;position:absolute;right: 68px; bottom: 18px;">';
 
@@ -631,7 +631,7 @@ function show_one_information(i) {
     str += '<p style="font-size: 10px;width:50px;text-align:center;position:absolute;right: 50px; bottom: 285px;cursor: pointer;">start navigation</p>';
     str += '</div>';
 
-    str += '<img src="./';
+    str += '<img src="./image/parking_lots/';
     str += i % 10;
     str += '.jpg" alt="cannot find the image" style="width:400px;height:200px;float:right;position:absolute;right: 24px; bottom: 15px;">';
 
