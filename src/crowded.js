@@ -29,7 +29,7 @@ function change_screen_size() {
 }
 
 $.ajax({
-    url: './crowded_data.csv',
+    url: '../data/crowded_data.csv',
     dataType: 'text',
 }).done(parse_crowded_data);
 
@@ -183,15 +183,15 @@ function variables_initialization() {
     sorting_order = "Distance";
     var icon_ratio = 0.1;
     icons.push({
-        url: "./image/blue-icon3.png",
+        url: "../image/blue-icon3.png",
         scaledSize: new google.maps.Size(570 * icon_ratio, 438 * icon_ratio),
     });
     icons.push({
-        url: "./image/yellow-icon3.png",
+        url: "../image/yellow-icon3.png",
         scaledSize: new google.maps.Size(570 * icon_ratio, 438 * icon_ratio),
     });
     icons.push({
-        url: "./image/red-icon3.png",
+        url: "../image/red-icon3.png",
         scaledSize: new google.maps.Size(570 * icon_ratio, 438 * icon_ratio),
     });
     blue_color = "#66B9FE"; blue_color2 = "#008CFF";
@@ -518,7 +518,7 @@ function show_informations() {
         str += ', ';
         str += locations[i].phone;
         str += '</p>';
-        str += '<img src="./image/parking_lots/';
+        str += '<img src="../image/parking_lots/';
         str += i % 10;
         str += '.jpg" alt="cannot find the image" style="width:108px;height:54px;float:right;position:absolute;right: 68px; bottom: 18px;">';
 
@@ -631,7 +631,7 @@ function show_one_information(i) {
     str += '<p style="font-size: 10px;width:50px;text-align:center;position:absolute;right: 50px; bottom: 285px;cursor: pointer;">start navigation</p>';
     str += '</div>';
 
-    str += '<img src="./image/parking_lots/';
+    str += '<img src="../image/parking_lots/';
     str += i % 10;
     str += '.jpg" alt="cannot find the image" style="width:400px;height:200px;float:right;position:absolute;right: 24px; bottom: 15px;">';
 
