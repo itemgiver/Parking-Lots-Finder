@@ -1,5 +1,5 @@
 # Parking Lots Finder
-Help drivers to easily find the appropriate parking lot
+Help drivers to easily find the appropriate parking lot.
 
 ## Webpage Preview
 
