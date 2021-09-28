@@ -1,6 +1,12 @@
-# Crowded
-2020, Design Project 4: High-fidelity Prototyping
+# Parking Lots Finder
+This website helps the user which parking lot is good to go.
 
-Main javascript file : crowded.js
+Main src files : index.html, crowded.css, crowded.js
+
+## Demo Link
 
 https://itemgiver.github.io/Parking-Lots-Finder/
+
+## Demo Video
+
+https://www.youtube.com/watch?v=umBTaq6oZlQ
