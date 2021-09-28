@@ -26,7 +26,7 @@ html, body {
     top: 12.5%;
     left: 0%;
     width: 444px;
-    height: 17.5%;
+    height: 13.5%;
     z-index: 100;
     background-color: transparent;
 }
@@ -34,10 +34,10 @@ html, body {
 #informations_div {
     display: none;
     position: absolute;
-    top: 30%;
+    top: 26%;
     left: 0%;
     width: 444px;
-    height: 70%;
+    height: 74%;
     border-top: 1px solid #E6E6E6;
     background-color: white;
     overflow: auto;

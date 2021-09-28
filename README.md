@@ -1,5 +1,5 @@
 # Parking Lots Finder
-This website helps the user which parking lot is good to go.
+Help drivers to easily find the appropriate parking lot
 
 Main src files : index.html, crowded.css, crowded.js
 
