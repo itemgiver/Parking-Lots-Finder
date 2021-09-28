@@ -287,7 +287,7 @@ input:-ms-input-placeholder {
 #fold-button1 {
     display: none;
     position: absolute;
-    left: 29.2%;
+    left: 444px;
     top: 2.5%;
     width: 2%;
     height: 7.5%;
@@ -298,7 +298,7 @@ input:-ms-input-placeholder {
 
 #fold-button2 {
     position: absolute;
-    left: 28.4%;
+    left: 435px;
     top: 2.5%;
     width: 2.8%;
     height: 7.5%;
