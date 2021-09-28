@@ -21,8 +21,8 @@ function change_screen_size() {
         toggle_fold_button = 1;
     }
     document.getElementById("search_box").focus();
-    current_map.style.left = "29.2%";
-    current_map.style.width = "70.8%";
+    current_map.style.left = "444px";
+    current_map.style.width = ($(window).width() - 444).toString()+"px";
     document.getElementById("informations_div").style.display = "block";
     document.getElementById("none_display_divs").style.display = "block";
     popup_message.style.left = "52%";
