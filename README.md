@@ -11,5 +11,5 @@ https://itemgiver.github.io/Parking-Lots-Finder/
 
 ## My Role
 
-Coded index.html, crowded.css, and some part of the crowded.js
+Coded index.html, crowded.css, and some part of the crowded.js \
 Implemented parking lot icons shown in the google map and search box UI.
