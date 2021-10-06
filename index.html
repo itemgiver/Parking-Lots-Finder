@@ -9,21 +9,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" rel="stylesheet">
-    <link href="./crowded.css" rel="stylesheet" />
+    <link href="./css/crowded.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.2.0/dist/jBox.all.min.js"></script>
     <link href="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.2.0/dist/jBox.all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="virtual-keyboard.css">
-    <script src="virtual-keyboard.min.js"></script>
+    <link rel="stylesheet" href="./css/virtual-keyboard.css">
+    <script src="./js/virtual-keyboard.min.js"></script>
 </head>
 <body>
-    <script src="./jquery/js/jquery-ui-1.10.0.custom.min.js"></script>
-    <script src="./crowded.js"></script>
+    <script src="./js/jquery-ui-1.10.0.custom.min.js"></script>
+    <script src="./js/crowded.js"></script>
     <div id="logo_div">
-        <img src="./logo.png" alt="cannot find the image" style="width:380px;height:76px;padding-left:30px;padding-top:7px;">
+        <img src="./data/image/logo.png" alt="cannot find the image" style="width:380px;height:76px;padding-left:30px;padding-top:7px;">
     </div>
     <div id="search_div">
         <div id="white_search_div"></div>
@@ -100,14 +100,14 @@
             </div>
         </div>
     </div>
-    <div id="tutorial-color" style="position: absolute; width: 100%; height: 100%; z-index: 10001; background-color: rgba(100,100,100,0.4)"></div>
-    <div id="tutorial">
+    <div id="tutorial-color" style="position: absolute; width: 100%; height: 100%; z-index: 10001; background-color: rgba(100,100,100,0.4); display: none;"></div>
+    <div id="tutorial" style="display: none;">
         <div id="tutorial-1" class="tutorial-content">
             <div class="tutorial-title">
                 <strong>Tutorial 1</strong> : Click on the map to see the parking lots
             </div>
             <video class="tutorial-video" controls autoplay muted loop>
-                <source src="./tutorial_video/Change_pin_by_click_map.mp4" , type="video/mp4" />
+                <source src="./data/tutorial_video/Change_pin_by_click_map.mp4" , type="video/mp4" />
             </video>
         </div>
         <div id="tutorial-2" class="tutorial-content" style="display: none;">
@@ -115,7 +115,7 @@
                 <strong>Tutorial 2</strong> : Search destination in the search box
             </div>
             <video class="tutorial-video" controls autoplay muted loop>
-                <source src="./tutorial_video/Search_destination.mp4" , type="video/mp4" />
+                <source src="./data/tutorial_video/Search_destination.mp4" , type="video/mp4" />
             </video>
         </div>
         <div id="tutorial-3" class="tutorial-content" style="display: none;">
@@ -123,7 +123,7 @@
                 <strong>Tutorial 3</strong> : Check the surrounding parking lots
             </div>
             <video class="tutorial-video" controls autoplay muted loop>
-                <source src="./tutorial_video/Search_based_on_current_location.mp4" , type="video/mp4" />
+                <source src="./data/tutorial_video/Search_based_on_current_location.mp4" , type="video/mp4" />
             </video>
         </div>
         <div id="tutorial-4" class="tutorial-content" style="display: none;">
@@ -131,7 +131,7 @@
                 <strong>Tutorial 4</strong> : Sort parking lots
             </div>
             <video class="tutorial-video" controls autoplay muted loop>
-                <source src="./tutorial_video/Sort_by_dis,crowd.mp4" , type="video/mp4" />
+                <source src="./data/tutorial_video/Sort_by_dis,crowd.mp4" , type="video/mp4" />
             </video>
         </div>
         <div id="tutorial-circle-1" class="tutorial-circle" style="left: 33%; background-color: black">1</div>
