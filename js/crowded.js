@@ -29,7 +29,7 @@ function change_screen_size() {
 }
 
 $.ajax({
-    url: './crowded_data.csv',
+    url: './data/parking_lots.csv',
     dataType: 'text',
 }).done(parse_crowded_data);
 
@@ -339,7 +339,7 @@ function events_initialization() {
             idx = tmp.id.substr(4);
 
             change_all_color(tmp, "#FAFAFA");
-            markers[idx+1].setAnimation(google.maps.Animation.BOUNCE);
+            //markers[idx+1].setAnimation(google.maps.Animation.BOUNCE);
         }, false);
         cell.addEventListener("mouseout", function (event) {
             var idx;
@@ -349,7 +349,7 @@ function events_initialization() {
             idx = tmp.id.substr(4);
 
             change_all_color(tmp, "#FFFFFF");
-            markers[idx + 1].setAnimation(null);
+            //markers[idx + 1].setAnimation(null);
         }, false);
     }
 
