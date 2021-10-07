@@ -1,5 +1,6 @@
 # Parking Lots Finder
-Help drivers to easily find the appropriate parking lot.
+
+Parking-Lots-Finder is a service that finds nearby parking lots for drivers. Drivers can see parking lot icons on the Google Map and move their car to the destination parking lot.
 
 ## Webpage Preview
 
